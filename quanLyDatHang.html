@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Đặt Hàng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+        }
+
+        header .logo {
+            width: 200px;
+            height: 100px;
+            background-color: #ccc;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-right a, .header-right span {
+            margin-left: 10px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .header-right a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 0 20px;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        nav input[type="text"] {
+            padding: 5px;
+            margin: 10px;
+        }
+
+        .sidebar {
+            width: 200px;
+            float: left;
+            background-color: #f8f8f8;
+            padding: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            text-align: center;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            padding: 8px 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group label {
+            width: 150px;
+            margin-right: 10px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .button-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-group input {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button-group input:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo"></div>
+    <div class="header-right">
+        <span>Nhân Viên</span>
+        <a href="#">Đăng Xuất</a>
+    </div>
+</header>
+<nav>
+    <a href="#">Trang chủ</a>
+    <a href="#">Quản lý sản phẩm</a>
+    <a href="#">Quản lý khách hàng</a>
+    <a href="#">Quản lý nhà sản xuất</a>
+    <a href="#">Quản lý Giỏ Hàng</a>
+    <a href="#">Quản lý Đặt Hàng</a>
+    <a href="#">Thống Kê</a>
+    <input type="text" placeholder="search">
+</nav>
+<div class="sidebar">
+    <h3>Loại LapTop</h3>
+    <ul>
+        <li><a href="#">DELL</a></li>
+        <li><a href="#">ASUS</a></li>
+        <li><a href="#">HP</a></li>
+        <li><a href="#">MACBOOK</a></li>
+    </ul>
+</div>
+<div class="main-content">
+    <h2>Thông tin Đặt Hàng</h2>
+    <form>
+        <div class="form-group">
+            <label for="so-hoa-don">Số Hoá Đơn</label>
+            <input type="text" id="so-hoa-don" name="so-hoa-don">
+        </div>
+        <div class="form-group">
+            <label for="ma-kh">Mã KH</label>
+            <input type="text" id="ma-kh" name="ma-kh">
+        </div>
+        <div class="form-group">
+            <label for="ma-sp">Mã Sản Phẩm</label>
+            <input type="text" id="ma-sp" name="ma-sp">
+        </div>
+        <div class="form-group">
+            <label for="ngay-dat-hang">Ngày đặt hàng</label>
+            <input type="text" id="ngay-dat-hang" name="ngay-dat-hang">
+        </div>
+        <div class="form-group">
+            <label for="ngay-giao">Ngày giao</label>
+            <input type="text" id="ngay-giao" name="ngay-giao">
+        </div>
+        <div class="form-group">
+            <label for="gia-tien">Giá tiền</label>
+            <input type="text" id="gia-tien" name="gia-tien">
+        </div>
+        <div class="form-group">
+            <label for="trang-thai">Trạng thái</label>
+            <input type="text" id="trang-thai" name="trang-thai">
+        </div>
+        <div class="button-group">
+            <input type="button" value="Thêm">
+            <input type="button" value="Sửa">
+            <input type="button" value="Xoá">
+            <input type="button" value="Lưu">
+        </div>
+    </form>
+    <table>
+        <thead>
+        <tr>
+            <th>Số Hoá Đơn</th>
+            <th>Mã KH</th>
+            <th>Mã Sản Phẩm</th>
+            <th>Ngày đặt hàng</th>
+            <th>Ngày giao</th>
+            <th>Giá tiền</th>
+            <th>Trạng Thái</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>HDv1</td>
+            <td>Mvu1</td>
+            <td>MTv1</td>
+            <td>23/4/2024</td>
+            <td>30/4/2024</td>
+            <td>500.000</td>
+            <td>Đang chuẩn bị hàng</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
